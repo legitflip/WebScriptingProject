@@ -1,0 +1,108 @@
+/* RESET CSS */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* BODY CSS */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+    background-color: beige;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    }
+    
+    /* HEADER CSS */
+    header {
+    background: rgb(34, 34, 34);
+    padding-top: 30px;
+    min-height: 100px;
+    height: 120px;
+    border-bottom: rgb(255, 255, 255) 2px solid;
+    opacity: 90%;
+    }
+    
+    /* #header section CSS */
+    header #headersection {
+    float: left;
+    display: flex;
+    justify-content: center;
+    }
+    
+    header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+    }
+    
+    
+    header #headersection span {
+    margin-top: 20px;
+    margin-left: 20px;
+    }
+    
+    header #headersection a {
+    color: floralwhite;
+    font-size: 40px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    margin-left: 8px;
+    }
+    
+    /* NAV CSS */
+    header nav {
+    float: right;
+    margin-top: 65px;
+    font-weight: bold;
+    }
+    
+    header a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    }
+    
+    header nav button {
+    width: 150px;
+    text-align: center;
+    }
+    
+    header nav a:hover {
+    color: rgb(221, 32, 32);
+    font-weight: bold;
+    transition: all .5s ease-in;
+    }
+    
+    header nav a:focus {
+    color: rgb(221, 32, 32);
+}
+
+/* Section/Image CSS */
+section {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    width: 100%;
+    padding-top: 20px;
+    height: 100%;
+
+    /* Bacground Image CSS */
+    background-image: url('../Homepage/Images/pexels-chan-walrus-941861.jpg');
+    background-position: center;
+    background-size: 1920px 1080px;
+}
+
+h1 {
+    font-size: 200px;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+}    
