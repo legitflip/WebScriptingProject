@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>CIS255 Brian Louderback Assignment U10W Location Page</title>
+
+    <!--- Responsive Website -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+
+<!-- Icon compatibility to Windows 8 -->
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Meta Data -->
+<meta name="description" content="restaurant website project">
+<meta name="keywords" content="restaurants, college, homework, project">
+<meta name="author" content="Chloe Jingco">
+
+
+<!-- Website Icon -->
+<link rel="apple-touch-icon" sizes="192x192" href="../Homepage/Images/favicon_io/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Homepage/Images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../Homepage/Images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="../Homepage/Images/favicon_io/site.webmanifest">
+<link rel="shortcut icon" href="./Images/favicon_io/favicon.ico" type="image/x-icon">
+
+<!-- Link to CSS and JavaScript page-->
+<link rel="stylesheet" href="../Location Page/locationpagestylesheet.css">
+<link rel="stylesheet" href="../Location Page/locationpage.js">
+    
+</head>
+<style>
+html {
+  background-color: beige;
+}
+#body {
+background-color: beige;
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  background-color: #9e9393;
+  font-family: Helvetica;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif; 
+}
+
+/* RESET CSS */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* BODY CSS */
+body {
+font-family: 'Times New Roman', Times, serif;
+font-size: 15px;
+line-height: 2;
+padding: 0;
+margin: 0;
+background-color: beige;
+}
+
+/* GLOBAL CSS FOR INDEX */
+.container {
+width: 80%;
+margin: auto;
+overflow: hidden;
+}
+
+ul {
+margin: 0;
+padding: 0;
+}
+
+/* HEADER CSS */
+header {
+background: rgb(34, 34, 34);
+padding-top: 30px;
+min-height: 70px;
+border-bottom: rgb(255, 255, 255) 1px solid;
+opacity: 90%;
+}
+
+/* #headersection CSS */
+header #headersection {
+float: left;
+display: flex;
+justify-content: center;
+}
+
+header li {
+float: left;
+display: inline;
+padding: 0 20px 0 20px;
+}
+
+header #headersection img {
+width: 150px;
+min-width: 70px;
+height: 183px;
+min-height: 70px;
+margin: 3px;
+padding: 3px;
+transform: translateY(-20px);
+}
+
+header #headersection span {
+margin-top: 20px;
+}
+
+header #headersection a {
+color: floralwhite;
+font-size: 40px;
+letter-spacing: 10px;
+font-weight: bold;
+margin-left: 8px;
+}
+
+/* NAV CSS */
+header nav {
+float: right;
+margin-top: 65px;
+font-weight: bold;
+}
+
+header a {
+color: black;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 18px;
+}
+
+header nav button {
+width: 150px;
+text-align: center;
+}
+
+header nav a:hover {
+color: rgb(221, 32, 32);
+font-weight: bold;
+transition: all .5s ease-in;
+}
+
+header nav a:focus {
+color: rgb(221, 32, 32);
+}
+
+/* Section/Image CSS */
+section {
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+    width: 100%;
+
+    /* Bacground Image CSS */
+    background-image: url('../Images/pexels-chan-walrus-941861.jpg');
+    background-position: center;
+    background-size: 1920px 1080px;
+}
+
+section h1 {
+    font-size: 200px;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    outline: 10px dotted white;
+}
+
+</style>
+<body>
+
+  <header>
+
+    <!-- Logo and Nav Menu -->
+    <div class="container">
+        <div id="headersection">
+            <span><a href="../Homepage/Homepage.html"> Midnight Fun </a></span>
+        </div>
+
+        <nav>
+            <ul class="nav_menu">
+                <li><button id="myButtonId" class="myButtonClass"><a href="/Homepage/Homepage.html">Home</a></button></li>
+                <li><button id="myButtonId" class="myButtonClass"><a href="/MenuPage/menuuu/index.html">Menu</a></button></li>
+                <li><button id="myButtonId" class="myButtonClass"><a href="/LocationPage/locationpage.html">Location</a></button></li>
+                <li><button id="myButtonId" class="myButtonClass"><a href="/ContactPage/Contact.html">Contact</a></button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<br>
+
+	<div id="body"> 
+		OUR LOCATIONS<br>
+		<br>SELECT YOUR STATE<br>
+		<select name="" id="states"></select>
+		
+		<div id="container"></div>		
+	</div>
+	
+</body>
+ <!--Dropdown list of list of at least 3 states where your restaurant operates generated from a JSON array using the innerHTML method-->
+<script>
+var providersJSON = {"providers": [
+  {
+    "state": "WASHINGTON",
+    "companies":[ 
+      {"name": "Bremerton's Midnight Fun Restaurant"},
+	  {"name": "Seattle's Midnight Fun Restaurant"},
+	  {"name": "Olympia's Midnight Fun Restaurant"}
+    ]
+  },
+  {
+    "state": "CALIFORNIA",
+    "companies":[ 
+      {"name": "Los Angeles's Midnight Fun Restaurant"},
+	  {"name": "San Francisco's Midnight Fun Restaurant"},
+      {"name": "San Diego's Midnight Fun Restaurant"}
+    ]
+  },
+  {
+    "state": "OREGON",
+    "companies":[ 
+      {"name": "Portland's Midnight Fun Restaurant"},
+      {"name": "Salem's Midnight Fun Restaurant"},
+	  {"name": "Eugene's Midnight Fun Restaurant"}
+    ]
+  }
+  
+]};
+
+var providers = providersJSON.providers;
+
+console.log(providers[2].companies[1].name);
+
+//--------------------------//
+var div = document.getElementById("container");
+var option0 = document.createElement("option");
+option0.text = "";
+option0.value = "";
+var states = document.getElementById("states");
+states.appendChild(option0);
+
+
+for(var i = 0; i < providers.length; i++) {
+  var option = document.createElement("option");
+  option.text = providers[i].state;
+  option.value = providers[i].state;
+  states.appendChild(option);
+}
+
+states.onchange = function(e) {
+  e.preventDefault();
+  var selected = this.value
+  if (selected !== ""){
+    showCompanies(selected);
+  } else {
+    console.log("Back to square one.")
+  }
+}
+
+function showCompanies(selected) {
+  for (var i = 0; i < providers.length; i++) {
+    if (providers[i].state == selected) {
+      var companies = providers[i].companies;
+      div.innerHTML = "";
+      for(var n = 0; n < companies.length; n++){
+        var p = document.createElement("p");
+        var text = document.createTextNode(companies[n].name);
+        p.appendChild(text);
+        div.appendChild(p);
+      }
+    }
+  }
+}
+</script>
+
+</html>

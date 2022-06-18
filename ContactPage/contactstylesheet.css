@@ -6,7 +6,7 @@ padding: 0;
 
 /* BODY CSS */
 body {
-font-family: 'Times New Roman', Times, serif;
+font-family: Fredoka;
 font-size: 15px;
 line-height: 2;
 padding: 0;
@@ -17,9 +17,12 @@ background-color: beige;
 
 /* GLOBAL CSS FOR INDEX */
 .container {
-width: 80%;
+width: 100%;
+display: flex;
+justify-content: space-between;
 margin: auto;
 overflow: hidden;
+height: 100%;
 }
 
 ul {
@@ -30,10 +33,10 @@ padding: 0;
 /* HEADER CSS */
 header {
 background: rgb(34, 34, 34);
-padding-top: 30px;
-min-height: 70px;
 border-bottom: rgb(255, 255, 255) 1px solid;
-opacity: 90%;
+padding-right: 2rem;
+padding-left: 2rem;
+height: 90px;
 }
 
 /* #header section CSS */
@@ -49,33 +52,22 @@ display: inline;
 padding: 0 20px 0 20px;
 }
 
-header #headersection img {
-width: 150px;
-min-width: 70px;
-height: 183px;
-min-height: 70px;
-margin: 3px;
-padding: 3px;
-transform: translateY(-20px);
-}
-
 header #headersection span {
-margin-top: 20px;
+    display: flex;
+    align-items: center;
 }
 
 header #headersection a {
 color: floralwhite;
 font-size: 40px;
 letter-spacing: 10px;
-font-weight: bold;
 margin-left: 8px;
 }
 
 /* NAV CSS */
 header nav {
-float: right;
-margin-top: 65px;
-font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 header a {
@@ -106,7 +98,7 @@ section {
     padding: 0;
     font-size: 30px;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 4rem;
     height: 100%;
 }
 
@@ -123,6 +115,8 @@ h1 {
     text-align:right;
     height:500px;
     width:600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .gmap_canvas {
@@ -130,4 +124,31 @@ h1 {
     background: none !important;
     height: 500px;
     width: 600px;
+}
+
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content .contact-info {
+    width: 100%;
+}
+
+.content .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .map {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
