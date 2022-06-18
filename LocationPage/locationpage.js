@@ -31,13 +31,8 @@ var providersJSON = {"providers": [
   console.log(providers[2].companies[1].name);
   
   //--------------------------//
-  var div = document.getElementById("container");
-  var option0 = document.createElement("option");
-  option0.text = "";
-  option0.value = "";
+  var results = document.getElementById("results");
   var states = document.getElementById("states");
-  states.appendChild(option0);
-  
   
   for(var i = 0; i < providers.length; i++) {
     var option = document.createElement("option");
@@ -47,12 +42,11 @@ var providersJSON = {"providers": [
   }
   
   states.onchange = function(e) {
-    e.preventDefault();
     var selected = this.value
     if (selected !== ""){
       showCompanies(selected);
     } else {
-      console.log("Back to square one.")
+      results.innerHTML = ''
     }
   }
   
@@ -60,12 +54,12 @@ var providersJSON = {"providers": [
     for (var i = 0; i < providers.length; i++) {
       if (providers[i].state == selected) {
         var companies = providers[i].companies;
-        div.innerHTML = "";
+        results.innerHTML = "";
         for(var n = 0; n < companies.length; n++){
           var p = document.createElement("p");
           var text = document.createTextNode(companies[n].name);
           p.appendChild(text);
-          div.appendChild(p);
+          results.appendChild(p);
         }
       }
     }
