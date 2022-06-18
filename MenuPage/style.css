@@ -2,19 +2,30 @@
 * {
     margin: 0;
     padding: 0;
-}
+    }
     
-/* BODY CSS */
-body {
-    font-family: 'Times New Roman', Times, serif;
+    /* BODY CSS */
+    body {
+    font-family: Fredoka;
     font-size: 15px;
     line-height: 2;
     padding: 0;
     margin: 0;
     background-color: beige;
-}
-
-ul {
+    }
+    
+    
+    /* GLOBAL CSS FOR INDEX */
+    header .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    overflow: hidden;
+    height: 100%;
+    }
+    
+    ul {
     margin: 0;
     padding: 0;
     }
@@ -22,11 +33,9 @@ ul {
     /* HEADER CSS */
     header {
     background: rgb(34, 34, 34);
-    padding-top: 30px;
-    min-height: 100px;
-    height: 120px;
-    border-bottom: rgb(255, 255, 255) 2px solid;
-    opacity: 90%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: 90px;
     }
     
     /* #header section CSS */
@@ -42,25 +51,22 @@ ul {
     padding: 0 20px 0 20px;
     }
     
-    
     header #headersection span {
-    margin-top: 20px;
-    margin-left: 20px;
+        display: flex;
+        align-items: center;
     }
     
     header #headersection a {
     color: floralwhite;
     font-size: 40px;
     letter-spacing: 10px;
-    font-weight: bold;
     margin-left: 8px;
     }
     
     /* NAV CSS */
     header nav {
-    float: right;
-    margin-top: 65px;
-    font-weight: bold;
+        display: flex;
+        align-items: center;
     }
     
     header a {
@@ -83,7 +89,7 @@ ul {
     
     header nav a:focus {
     color: rgb(221, 32, 32);
-}
+    }
 
 #item{
 
